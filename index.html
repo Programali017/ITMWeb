@@ -319,6 +319,12 @@
             flex-shrink: 0;
         }
 
+        @media (max-width: 768px) {
+            .carousel {
+                width: 95%; /* Se adapta mejor en móviles */
+            }   
+        }
+
         /* Contact Section */
         #contacto {
             background-color: #1a1a1a;
@@ -610,7 +616,7 @@
             carrusel.style.transform = "translateX(" + desplazamiento + ")";
         }
 
-        setInterval(moverCarrusel, 3000); // Cambia de imagen cada 3 segundos
+        setInterval(moverCarrusel, 3000); 
 
     </script>
 
