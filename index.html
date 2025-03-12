@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soldaduras Profesionales: Soluciones de soldadura confiables y de calidad para proyectos industriales y comerciales.">
-    <link rel="icon" href="images/logo.png" type="image/png"> <!-- Logo al lado del title -->
-    <title>Soldaduras Profesionales</title>
+    <meta name="description"
+        content="Soldaduras Profesionales: Soluciones de soldadura confiables y de calidad para proyectos industriales y comerciales.">
+    <link rel="icon" href="images/logo2.png" type="image/png"> <!-- Logo al lado del title -->
+    <title>ITM International Metal Welding</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
@@ -14,20 +16,33 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: #333;
+            color: #000000;
             line-height: 1.6;
         }
 
-        /* Header */
         header {
-        background: linear-gradient(90deg, #ff6600, #1f1e1d); /* Cambia los colores según tu preferencia */
-        color: #fff;
-        padding: 1rem 2rem;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(90deg, #ff6600, #1f1e1d);
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 130px; /*change size logo*/
+            /* Ajusta el tamaño del logo */
+            height: auto;
+            margin-right: 15px;
         }
 
         header h1 {
@@ -40,6 +55,7 @@
             font-size: 1rem;
             font-weight: 300;
         }
+
 
         /* Navigation */
         nav {
@@ -64,7 +80,8 @@
 
         /* Hero Section */
         .hero {
-            background-image: url('images/sold1.jpg'); /* fondo de la primera seccion de la website */
+            background-image: url('images/img1.jpeg');
+            /* fondo de la primera seccion de la website */
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -84,7 +101,9 @@
             z-index: 1;
         }
 
-        .hero h2, .hero p, .button-ct {
+        .hero h2,
+        .hero p,
+        .button-ct {
             position: relative;
             z-index: 2;
         }
@@ -107,12 +126,12 @@
         }
 
         .button-ct:hover {
-            background-color: #e65500;
+            background-color: #ff6600;
         }
 
         /* Section Styles */
         section {
-            padding: 4rem 2rem;
+            padding: 1rem 2rem;
             text-align: center;
         }
 
@@ -129,7 +148,7 @@
         }
 
         .service {
-            background-color: #f9f9f9;
+            background-color: #ff6600;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -149,6 +168,155 @@
 
         .service h3 {
             margin: 0 0 1rem;
+        }
+
+        .btn-more-info {
+            padding: 10px 20px;
+            background-color: #2e2c2a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        /* Estilo para la sección oculta */
+        .extra-info {
+            display: none;
+            margin-top: 20px;
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        /* Contenedor Principal */
+        .about-container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        /* Título */
+        .about-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #ff6600;
+        }
+
+        /* Contenedor de imágenes */
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10%;
+            margin-bottom: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            width: 200px;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 5px #ff6600;
+        }
+
+        .team-member p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .team-member .role {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Descripción */
+        .about-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /*Carrousel*/
+        /* Contenedor principal con dos columnas */
+        .contenedor {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            background: linear-gradient(90deg, #1f1e1d, #ff6600);
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        /* Estilo de la columna izquierda (título) */
+        .izquierda {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .izquierda h1 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        /* Sección del carrusel */
+        .workImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1f1e1d;
+            padding: 20px 0;
+            border-radius: 0px;
+            overflow: hidden;
+        }
+
+        .carousel {
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 0px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            /* Base más grande que altura */
+            object-fit: cover;
+            flex-shrink: 0;
         }
 
         /* Contact Section */
@@ -241,66 +409,229 @@
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>International Metal</h1>
-        <p>Quality and safety in every joint</p>
+        <div class="logo-container">
+            <img src="images/logo1.png" alt="ITM Logo">
+            <h1>ITM International Metal Welding</h1>
+        </div>
     </header>
+    
 
     <nav>
-        <a href="#services">Services</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Dienstleistungen </a>
+        <a href="#aboutus">Über uns</a>
+        <a href="#contact">Kontakt</a>
     </nav>
 
     <section class="hero">
-        <h2>Industrial Welding Experts</h2>
-        <p>Trust us for your most demanding projects.</p>
-        <a href="https://wa.me/48791026735?text=Hello%2C+I+would+like+to+know+more+about+your+services." class="button-ct" target="_blank">
-            Request a Quote
+        <h2> Experten für Industrieschweißen</h2>
+        <p>Vertrauen Sie uns für Ihre anspruchsvollsten Projekte.</p>
+        <a href="https://wa.me/48518521451?text=Hallo%2C+ich+m%C3%B6chte+mehr+%C3%BCber+Ihre+Dienstleistungen+erfahren."
+            class="button-ct" target="_blank">
+            Angebot anfordern
         </a>
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
+        <h2>Unsere Dienstleistungen</h2>
         <div class="services">
             <div class="service">
-                <img src="https://via.placeholder.com/250" alt="TIG Welding">
-                <h3>TIG Welding</h3>
-                <p>High precision for delicate work.</p>
+                <img src="images/service1.webp" alt="Service 1">
+                <h3>Schweißen</h3>
+                <p>Wir sind Spezialisten für Schweißarbeiten und liefern zuverlässige und
+                    hochwertige Lösungen in ganz Europa. Unser Team aus TÜV Rheinland-zertifizierten Schweißern
+                    garantiert höchste Standards in Präzision, Sicherheit und Beständigkeit.</p>
+                <!-- Botón que muestra/oculta la información adicional -->
+                <a href="javascript:void(0);" class="btn-more-info" onclick="toggleInfo()">Mehr anzeigen</a>
+
+                <!-- Información adicional (oculta inicialmente) -->
+                <div class="extra-info">
+                    <h4>Schweißtechniken auf die wir spezialisiert sind</h4>
+                    <ul>
+                        <li>Lichtbogenschweißen mit umhüllter Elektrode (MMA)</li>
+                        <li>Lichtbogenschweißen mit nicht umhüllter Elektrode</li>
+                        <li>Lichtbogenschweißen mit selbstschützendem Fülldraht</li>
+                        <li>Unterpulverschweißen mit Drahtelektrode</li>
+                        <li>MIG-Schweißen</li>
+                        <li>MIG-Schweißen</li>
+                        <li>MAG-Schweißen</li>
+                        <li>Fülldrahtschweißen mit aktiver Gasumhüllung</li>
+                        <li>Fülldrahtschweißen mit inaktiver (inert) Gasumhüllung</li>
+                        <li>WIG-Schweißen (TIG-Schweißen)</li>
+                        <li>Plasmaschweißen</li>
+                        <li>Autogenes Schweißen (Acetylen-Sauerstoff-Schweißen)</li>
+                        <li>Hartlöten mit Flamme</li>
+                    </ul>
+                </div>
+
             </div>
             <div class="service">
-                <img src="https://via.placeholder.com/250" alt="MIG Welding">
-                <h3>MIG Welding</h3>
-                <p>Fast and efficient for large projects.</p>
+                <img src="images/service2.webp" alt="Service 2">
+                <h3>Montagearbeiten</h3>
+                <p>Wir sind auf die Montage von Metallkonstruktionen spezialisiert – von kleinen Installationen
+                    bis hin zu groß angelegten Bauprojekten. Unser Team arbeitet präzise und effizient,
+                    um stabile und sichere Konstruktionen zu gewährleisten, die allen branchenspezifischen Vorschriften
+                    und
+                    Anforderungen entsprechen.</p>
             </div>
             <div class="service">
-                <img src="https://via.placeholder.com/250" alt="Structure Repair">
-                <h3>Structure Repair</h3>
-                <p>Restore functionality and safety.</p>
+                <img src="images/service3.webp" alt="Service 3">
+                <h3>Strukturreparatur</h3>
+                <p>Wir erkennen und beheben Schäden an Metallkonstruktionen, verstärken deren Stabilität und
+                    verlängern ihre Lebensdauer. Durch den Einsatz modernster Techniken reparieren wir Schweißnähte,
+                    korrigieren Verformungen und stellen die Funktionalität der Strukturen wieder her, sodass sie
+                    dauerhaft belastbar bleiben.</p>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <img src="https://via.placeholder.com/800x400" alt="Work Team" style="width: 100%; border-radius: 10px; margin: 2rem 0;">
-        <p>With over 10 years of experience, we offer reliable and high-quality welding solutions to meet our customers' needs.</p>
+    <script>
+        // Función para mostrar u ocultar la información adicional
+        function toggleInfo() {
+            var extraInfo = document.querySelector('.extra-info');
+            var btn = document.querySelector('.btn-more-info');
+
+            if (extraInfo.style.display === 'none' || extraInfo.style.display === '') {
+                extraInfo.style.display = 'block';
+                btn.textContent = 'Weniger anzeigen';
+            } else {
+                extraInfo.style.display = 'none';
+                btn.textContent = 'Mehr anzeigen';
+            }
+        }
+    </script>
+
+    <section id="aboutus" class="about-container">
+        <!-- Título -->
+        <h2> Über uns</h2>
+
+        <!-- Fotos del Equipo -->
+        <div class="team-container">
+            <div class="team-member">
+                <img src="images/Amelia.JPG" alt="Amelia">
+                <p>Amelia Szlomkowska</p>
+                <p class="role">Inhaberin</p> <!-- Role -->
+            </div>
+            <div class="team-member">
+                <img src="images/Robert.JPG" alt="Robert">
+                <p>Robert Szlomkowski</p>
+                <p class="role">Spezialist für Schweißtechnik und Metallverarbeitung</p><!-- Role -->
+            </div>
+            <div class="team-member">
+                <img src="images/Joze.JPG" alt="Joze">
+                <p>Joze Binkowski</p>
+                <p class="role">Kundenbetreuer</p> <!-- Role -->
+            </div>
+            <div class="team-member">
+                <img src="images/Alison.JPG" alt="Alison">
+                <p>Alison Buitrago</p>
+                <p class="role">Technischer und IT-Support</p> <!-- Role -->
+            </div>
+        </div>
+
+        <!-- Descripción de la empresa -->
+        <p class="about-text">
+            Wir sind Spezialisten für Schweißarbeiten, Montage und Reparatur von Metallkonstruktionen
+            und liefern zuverlässige, hochwertige Lösungen in ganz Europa. Unser Team besteht aus
+            TÜV Rheinland-zertifizierten Schweißern, die höchste Standards in Präzision, Sicherheit und
+            Langlebigkeit gewährleisten. Wir sind bereit, überall dort zu arbeiten, wo Sie uns brauchen,
+            und verwandeln Metall in starke und dauerhafte Strukturen, die die Erwartungen unserer Kunden übertreffen.
+        </p>
     </section>
 
+    <section class="contenedor">
+        <!-- Columna izquierda (Título) -->
+        <div class="izquierda">
+            <h1>Unsere <br>
+                Arbeit</h1>
+        </div>
+
+        <!-- Columna derecha (Carrusel de imágenes) -->
+        <div class="workImg">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <img src="images/gal1.jpeg" alt="Imagen 1">
+                    <img src="images/gal2.jpeg" alt="Imagen 2">
+                    <img src="images/gal3.jpeg" alt="Imagen 3">
+                    <img src="images/gal4.jpeg" alt="Imagen 4">
+                    <img src="images/gal5.jpeg" alt="Imagen 5">
+                    <img src="images/gal6.jpeg" alt="Imagen 6">
+                    <img src="images/gal7.jpeg" alt="Imagen 7">
+                    <img src="images/gal8.jpeg" alt="Imagen 8">
+                    <img src="images/gal9.jpeg" alt="Imagen 9">
+                    <img src="images/gal10.jpeg" alt="Imagen 10">
+                    <img src="images/gal11.jpeg" alt="Imagen 11">
+                    <img src="images/gal12.jpeg" alt="Imagen 12">
+                    <img src="images/gal13.jpeg" alt="Imagen 13">
+                    <img src="images/gal14.jpeg" alt="Imagen 14">
+                    <img src="images/gal15.jpeg" alt="Imagen 15">
+                    <img src="images/gal16.jpeg" alt="Imagen 16">
+                    <img src="images/gal17.jpeg" alt="Imagen 17">
+                    <img src="images/gal19.jpeg" alt="Imagen 19">
+                    <img src="images/gal20.jpeg" alt="Imagen 20">
+                    <img src="images/gal21.jpeg" alt="Imagen 21">
+                    <img src="images/gal22.jpeg" alt="Imagen 22">
+                    <img src="images/gal23.jpeg" alt="Imagen 23">
+                    <img src="images/gal24.jpeg" alt="Imagen 24">
+                    <img src="images/gal25.jpeg" alt="Imagen 25">
+                    <img src="images/gal26.jpeg" alt="Imagen 26">
+                    <img src="images/gal27.jpeg" alt="Imagen 27">
+                    <img src="images/gal28.jpeg" alt="Imagen 28">
+                    <img src="images/gal29.jpeg" alt="Imagen 29">
+                    <img src="images/gal30.jpeg" alt="Imagen 30">
+                    <img src="images/gal31.jpeg" alt="Imagen 31">
+                    <img src="images/gal32.jpeg" alt="Imagen 32">
+                    <img src="images/gal33.jpeg" alt="Imagen 33">
+                    <img src="images/gal34.jpeg" alt="Imagen 34">
+                    <img src="images/gal35.jpeg" alt="Imagen 35">
+                    <img src="images/gal36.jpeg" alt="Imagen 36">
+                    <img src="images/gal37.jpeg" alt="Imagen 37">
+                    <img src="images/gal38.jpeg" alt="Imagen 38">
+                    <img src="images/gal39.jpeg" alt="Imagen 39">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let indice = 0;
+        const carrusel = document.querySelector('.carousel-inner');
+        const imagenes = document.querySelectorAll('.carousel img');
+        const total = imagenes.length;
+
+        function moverCarrusel() {
+            indice++;
+            if (indice >= total) {
+                indice = 0;
+            }
+            const desplazamiento = -indice * 100 + "%";
+            carrusel.style.transition = "transform 0.5s ease-in-out";
+            carrusel.style.transform = "translateX(" + desplazamiento + ")";
+        }
+
+        setInterval(moverCarrusel, 3000); // Cambia de imagen cada 3 segundos
+
+    </script>
+
+
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Phone: +48 123 456 789</p>
-        <p>Email: contact@soldadurasprofesionales.com</p>
-        <p>Address: Main Street 123, City</p>
+        <h2>Kontact</h2>
+        <p>Telefon: +48 518 521 451</p>
+        <p>E-Mail: internationalmetalwelding@gmail.com</p>
+        <p>Addresse: Grodzisk Mazowiecki, Polen</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Soldaduras Profesionales. All rights reserved.</p>
+        <p>&copy; 2025 ITM International Metal Welding. All rights reserved.</p>
     </footer>
 
-    <a href="https://wa.me/48791026735?text=Hello%2C+I+would+like+to+know+more+about+your+services." class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/48518521451?text=Hallo%2C+ich+m%C3%B6chte+mehr+%C3%BCber+Ihre+Dienstleistungen+erfahren."
+        class="whatsapp-btn" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 </body>
+
 </html>
